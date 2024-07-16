@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import "./styles/reset.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import { Formulario } from "./Components/Formulario/Formulario.jsx";
+import { Listagem } from "./Components/Listagem/Listagem.jsx";
 
 function App() {
+  const [produtos, setProdutos] = useState([]);
+
+  const handleProdutoCadastrado = (novoProduto) => {
+    // console.log('Vetor de produtos:', produtos);
+    setProdutos([...produtos, novoProduto]);
+    console.log('Vetor de produtos atualizado:', produtos);
+    
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="app">
+      <Formulario onProdutoCadastrado={handleProdutoCadastrado} />
+      <Listagem produtos={produtos} />
     </div>
   );
 }
