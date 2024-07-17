@@ -5,6 +5,11 @@ section#listagem{
     padding-top: 4rem;
 }
 
+select.form-select#ordenacao{
+    width: auto;
+    margin-bottom:1rem;
+}
+
 table.table{
     width: 50vw;
     border: 2px solid black;
