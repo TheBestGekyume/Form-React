@@ -1,5 +1,5 @@
 import "./Listagem.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Produtos } from "../Produtos/Produtos";
 
 export function Listagem({ produtos }) {
