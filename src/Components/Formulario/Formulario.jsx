@@ -30,7 +30,7 @@ export function Formulario({ onProdutoCadastrado }) {
 
   return (
     <section id="formulario">
-      <form className="form" onSubmit={cadastraProduto}>
+      <form className="form animated-border" onSubmit={cadastraProduto}>
         <div className="mb-3">
           <label htmlFor="protudo_nome" className="form-label">
             Nome Do Produto
