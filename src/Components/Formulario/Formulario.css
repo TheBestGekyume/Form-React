@@ -4,11 +4,6 @@ section#formulario{
   
 }
 
-
-.animated-border {
-  
-}
-
 @property --angle{
   syntax: "<angle>";
   initial-value: 0deg;
